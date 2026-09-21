@@ -1,0 +1,159 @@
+:root {
+    --header-title: #48734e;
+    --hav-link: #497156;
+
+    --subtitle: #749677;
+    --title: #2c4b43;
+    --text: #7b8b8b;
+    
+    --button-color1: #467149;
+    --button-color2: #eff4f0;
+    
+    --highlighted-color1: #709774;
+    --highlighted-color2: #f1f4f1;
+
+    --footer-Color1: #2f4d43;
+    --footer-color2: #f7f8f8;
+
+    --background: #e7f1e8;
+    --content: #487950;
+}
+
+
+
+
+* {
+    font-family: Nunito;
+    box-sizing: border-box;
+
+    padding: 0;
+    margin: 0;
+}
+
+span {
+    color: var( --highlighted-color1 );
+    font-weight: bold;
+}
+
+
+
+
+.body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.subtitle {
+    color: var( --subtitle );
+    font-size: 14px;
+}
+
+.title {
+    color: var( --title );
+    margin: 10px 0;
+}
+
+.text {
+    color: var( --text );
+}
+
+.object-animated {
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.object-animated:hover {
+    transform: scale( 1.1 );
+}
+
+
+
+
+header {
+    background-color: var( --highlighted-color2 );
+    color: var( --header-title );
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px 0;
+}
+
+.header-body {
+    width: 70%;
+}
+
+.header__icon {
+    width: 45px;
+}
+
+#title {
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.nav__link {
+    color: var( --header-title );
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    position: relative;
+    margin-left: 20px;
+}
+
+.nav__link-active::after {
+    content: "";
+    position: absolute;
+
+    bottom: -16px;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+
+    background-color: var( --header-title );
+}
+
+.nav__link-desactive::after {
+    content: "";
+    position: absolute;
+
+    bottom: -16px;
+    left: 0;
+
+    width: 0;
+    height: 2px;
+
+    background-color: var( --header-title );
+    transition: width 0.3s ease;
+}
+
+.nav__link-desactive:hover::after {
+    width: 100%;
+}
+
+
+
+
+footer {
+    background-color: var( --footer-Color1 );
+    color: var( --footer-color2 );
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-body {
+    width: 70%;
+}
+
+.footer__title {
+    font-size: 20px;
+}
+
+.footer__icon {
+    width: 45px;
+}
